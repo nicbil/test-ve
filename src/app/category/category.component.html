@@ -1,0 +1,24 @@
+<app-menu></app-menu>
+<div class="body-wrap">
+  <div class="body">
+    <mat-card>
+      <form [formGroup]="createCategoryForm" (ngSubmit)="createCategory()">
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Category</mat-label>
+            <input matInput type="text" formControlName="category">
+          </mat-form-field>
+          <button mat-button>Add</button>
+        </div>
+      </form>
+
+      <div *ngFor="let category of categoryService.getCategories; let i = index;" class="category">
+        <div>{{i + 1}} - {{category.name}}</div>
+        <div>
+          <button mat-button (click)="deleteCategory(category)">Delete</button>
+          <button mat-button [routerLink]="['/edit-category', category.id]">Edit</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

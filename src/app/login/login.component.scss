@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  form {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #0f43a242;
+    padding: 20px;
+    margin: 20px;
+
+    .form-group {
+      min-height: 45px;
+
+      .form-element {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        label {
+          margin-right: 10px;
+        }
+      }
+
+      .invalid-feedback {
+        font-size: 12px;
+        color: red;
+      }
+    }
+
+    button {
+      margin-bottom: 10px;
+      align-self: flex-end;
+      cursor: pointer;
+    }
+
+    .alert-danger {
+      font-size: 12px;
+      color: red;
+    }
+  }
+}

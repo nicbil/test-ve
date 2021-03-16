@@ -1,0 +1,16 @@
+<app-menu></app-menu>
+<div class="body-wrap">
+  <div class="body">
+    <mat-card>
+      <form [formGroup]="editCategoryForm" (ngSubmit)="editCategory()">
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Category</mat-label>
+            <input matInput type="text" formControlName="category">
+          </mat-form-field>
+          <button mat-button>Ok</button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>

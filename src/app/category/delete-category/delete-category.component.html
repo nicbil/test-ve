@@ -1,0 +1,19 @@
+<app-menu></app-menu>
+<div class="body-wrap">
+  <div class="body">
+    <mat-card>
+      <form [formGroup]="deleteCategoryForm" (ngSubmit)="deleteCategory()">
+        <mat-form-field appearance="fill">
+          <mat-label>Categories</mat-label>
+          <mat-select formControlName="category">
+            <mat-option value=""></mat-option>
+            <mat-option *ngFor="let category of getCategories()" [value]="category.id">
+              {{category.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-button>Ok</button>
+      </form>
+    </mat-card>
+  </div>
+</div>
